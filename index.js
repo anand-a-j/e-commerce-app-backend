@@ -32,7 +32,7 @@ mongoose.connect(DB).then(()=>{
 
 // creating an api
 app.listen(PORT,"0.0.0.0",() => {
-    // console.log(`connect at port ${PORT} checked`);
+     console.log(`connect at port ${PORT} checked`);
 });
 
 

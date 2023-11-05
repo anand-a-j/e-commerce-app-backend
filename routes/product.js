@@ -6,10 +6,10 @@ const auth = require("../middleware/auth");
 // fetch products based on category
 productRouter.get("/api/products/", auth, async (req, res) => {
     try {
-        console.log(req.query.category);
+     
       
         let products = await Product.find({ category: req.query.category });
-        console.log('Products:', products); 
+     
         res.json(products);
     } catch (e) {
         console.error(e);
@@ -74,7 +74,7 @@ productRouter.get('/api/deal-of-day',auth ,async (req,res)=>{
 
             return aSum < bSum ? 1 : -1;
         });
-        console.log(products);
+      
         res.json(products);
     } catch (e) {
         res.status(500).json({ error: e.message });
